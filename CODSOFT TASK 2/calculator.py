@@ -16,36 +16,33 @@ def divide(x, y):
         return "Cannot divide by zero"
     return x / y
 
-# Main program
 while True:
     print("Options:")
-    print("Enter 'add' for addition")
-    print("Enter 'subtract' for subtraction")
-    print("Enter 'multiply' for multiplication")
-    print("Enter 'divide' for division")
-    print("Enter 'quit' to end the program")
+    print("1. Addition")
+    print("2. Subtraction")
+    print("3. Multiplication")
+    print("4. Division")
+    print("5. Quit")
 
-    user_input = input(": ")
+    user_input = input("Please enter your choice (1/2/3/4/5): ")
 
-    if user_input == "quit":
+    if user_input == "5":
         break
-    elif user_input in ("add", "subtract", "multiply", "divide"):
-        num1 = float(input("Enter first number: "))
-        num2 = float(input("Enter second number: "))
+    elif user_input in ("1", "2", "3", "4"):
+        num1 = float(input("Enter the first number: "))
+        num2 = float(input("Enter the second number: "))
 
-        if user_input == "add":
+        if user_input == "1":
             print("Result:", add(num1, num2))
-        elif user_input == "subtract":
+        elif user_input == "2":
             print("Result:", subtract(num1, num2))
-        elif user_input == "multiply":
+        elif user_input == "3":
             print("Result:", multiply(num1, num2))
-        elif user_input == "divide":
+        elif user_input == "4":
             result = divide(num1, num2)
             if isinstance(result, str):
                 print(result)
             else:
                 print("Result:", result)
-        else:
-            print("Invalid input")
     else:
         print("Invalid input")
