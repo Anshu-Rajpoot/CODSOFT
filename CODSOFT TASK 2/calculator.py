@@ -27,6 +27,7 @@ while True:
     user_input = input("Please enter your choice (1/2/3/4/5): ")
 
     if user_input == "5":
+        print("Thank you for using this Calculator!!")
         break
     elif user_input in ("1", "2", "3", "4"):
         num1 = float(input("Enter the first number: "))
